@@ -70,7 +70,7 @@ class _FilterAttractionWidgetState extends State<FilterAttractionWidget> {
                     ),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'rla23hhp' /* Any */,
+                        'n5utq7g9' /* Any */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                     ),
@@ -93,7 +93,7 @@ class _FilterAttractionWidgetState extends State<FilterAttractionWidget> {
                     ),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        '8m8mnlwl' /* Family */,
+                        'pw7u908z' /* Family */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                     ),
@@ -116,7 +116,7 @@ class _FilterAttractionWidgetState extends State<FilterAttractionWidget> {
                     ),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        '8e3mdoad' /* Music */,
+                        'w3ej8yao' /* Music */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                     ),
@@ -139,7 +139,7 @@ class _FilterAttractionWidgetState extends State<FilterAttractionWidget> {
                     ),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'fe2h25hv' /* Outdoors */,
+                        '2v4cg7ad' /* Outdoors */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                     ),
@@ -162,7 +162,7 @@ class _FilterAttractionWidgetState extends State<FilterAttractionWidget> {
                     ),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        '6od1cors' /* AnyWheather */,
+                        'mb60dyki' /* AnyWheather */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                     ),
@@ -185,7 +185,7 @@ class _FilterAttractionWidgetState extends State<FilterAttractionWidget> {
                     ),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'g00t4evr' /* Ethno */,
+                        'l6sw16eg' /* Ethno */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                     ),
@@ -208,7 +208,7 @@ class _FilterAttractionWidgetState extends State<FilterAttractionWidget> {
                     ),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'zezsnn48' /* Livestyle */,
+                        'sw6pewb4' /* Livestyle */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                     ),
@@ -231,7 +231,7 @@ class _FilterAttractionWidgetState extends State<FilterAttractionWidget> {
                     ),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'w6014rhs' /* Eco */,
+                        'hut6y0io' /* Eco */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium,
                     ),
@@ -252,7 +252,7 @@ class _FilterAttractionWidgetState extends State<FilterAttractionWidget> {
               },
               child: Text(
                 FFLocalizations.of(context).getText(
-                  '5l39oyez' /* Cancel */,
+                  'nn6pu691' /* Cancel */,
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium,
               ),

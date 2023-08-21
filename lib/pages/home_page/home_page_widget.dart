@@ -105,7 +105,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'j1tlexfh' /* Hello World */,
+                                  'z7shxg8r' /* Hello World */,
                                 ),
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
@@ -133,7 +133,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         itemCount: attraction.length,
-                        separatorBuilder: (_, __) => SizedBox(height: 20.0),
+                        separatorBuilder: (_, __) => SizedBox(height: 30.0),
                         itemBuilder: (context, attractionIndex) {
                           final attractionItem = attraction[attractionIndex];
                           return InkWell(
@@ -153,7 +153,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               );
                             },
                             child: Container(
-                              width: double.infinity,
+                              width: MediaQuery.sizeOf(context).width * 0.7,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
@@ -180,7 +180,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       child: Image.network(
                                         'https://picsum.photos/seed/105/600',
                                         width: double.infinity,
-                                        height: 300.0,
+                                        height: 200.0,
                                         fit: BoxFit.cover,
                                       ),
                                     ),
