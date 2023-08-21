@@ -1,3 +1,4 @@
+import '/components/shared/header/header_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -41,28 +42,91 @@ class _InfoPageWidgetState extends State<InfoPageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
-          automaticallyImplyLeading: false,
-          title: Text(
-            FFLocalizations.of(context).getText(
-              'rzvoq6gh' /* Page Title */,
-            ),
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Outfit',
-                  color: Colors.white,
-                  fontSize: 22.0,
-                ),
-          ),
-          actions: [],
-          centerTitle: false,
-          elevation: 2.0,
-        ),
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [],
+          child: Stack(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.network(
+                          'https://picsum.photos/seed/338/600',
+                          width: 300.0,
+                          height: 200.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Text(
+                        FFLocalizations.of(context).getText(
+                          'gx27qubs' /* Hello World */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium,
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.network(
+                          'https://picsum.photos/seed/265/600',
+                          width: 300.0,
+                          height: 200.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Text(
+                        FFLocalizations.of(context).getText(
+                          'cjfsc01v' /* Hello World */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium,
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(
+                              'https://picsum.photos/seed/716/600',
+                              width: 300.0,
+                              height: 200.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.network(
+                              'https://picsum.photos/seed/869/600',
+                              width: 300.0,
+                              height: 200.0,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ],
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.network(
+                          'https://picsum.photos/seed/573/600',
+                          width: 300.0,
+                          height: 200.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ]
+                        .divide(SizedBox(height: 15.0))
+                        .addToStart(SizedBox(height: 30.0))
+                        .addToEnd(SizedBox(height: 90.0)),
+                  ),
+                ),
+              ),
+              wrapWithModel(
+                model: _model.headerModel,
+                updateCallback: () => setState(() {}),
+                child: HeaderWidget(),
+              ),
+            ],
           ),
         ),
       ),

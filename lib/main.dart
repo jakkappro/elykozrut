@@ -137,16 +137,16 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: Colors.white,
-        selectedItemColor: Color(0x00000000),
-        unselectedItemColor: Color(0x00000000),
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        selectedItemColor: FlutterFlowTheme.of(context).primary,
+        unselectedItemColor: Color(0xFF757575),
         selectedBackgroundColor: Color(0x00000000),
         borderRadius: 8.0,
         itemBorderRadius: 8.0,
-        margin: EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 5.0),
+        margin: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
         padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
         width: double.infinity,
-        elevation: 0.0,
+        elevation: 5.0,
         items: [
           FloatingNavbarItem(
             customWidget: Column(
@@ -154,8 +154,9 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   Icons.art_track,
-                  color:
-                      currentIndex == 0 ? Color(0x00000000) : Color(0x00000000),
+                  color: currentIndex == 0
+                      ? FlutterFlowTheme.of(context).primary
+                      : Color(0xFF757575),
                   size: 24.0,
                 ),
                 Text(
@@ -165,8 +166,8 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 0
-                        ? Color(0x00000000)
-                        : Color(0x00000000),
+                        ? FlutterFlowTheme.of(context).primary
+                        : Color(0xFF757575),
                     fontSize: 11.0,
                   ),
                 ),
@@ -179,8 +180,9 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   FontAwesomeIcons.route,
-                  color:
-                      currentIndex == 1 ? Color(0x00000000) : Color(0x00000000),
+                  color: currentIndex == 1
+                      ? FlutterFlowTheme.of(context).primary
+                      : Color(0xFF757575),
                   size: 24.0,
                 ),
                 Text(
@@ -190,8 +192,8 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 1
-                        ? Color(0x00000000)
-                        : Color(0x00000000),
+                        ? FlutterFlowTheme.of(context).primary
+                        : Color(0xFF757575),
                     fontSize: 11.0,
                   ),
                 ),
@@ -204,8 +206,9 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   FontAwesomeIcons.puzzlePiece,
-                  color:
-                      currentIndex == 2 ? Color(0x00000000) : Color(0x00000000),
+                  color: currentIndex == 2
+                      ? FlutterFlowTheme.of(context).primary
+                      : Color(0xFF757575),
                   size: 24.0,
                 ),
                 Text(
@@ -215,8 +218,8 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 2
-                        ? Color(0x00000000)
-                        : Color(0x00000000),
+                        ? FlutterFlowTheme.of(context).primary
+                        : Color(0xFF757575),
                     fontSize: 11.0,
                   ),
                 ),
@@ -229,8 +232,9 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   FontAwesomeIcons.info,
-                  color:
-                      currentIndex == 3 ? Color(0x00000000) : Color(0x00000000),
+                  color: currentIndex == 3
+                      ? FlutterFlowTheme.of(context).primary
+                      : Color(0xFF757575),
                   size: 24.0,
                 ),
                 Text(
@@ -240,8 +244,8 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 3
-                        ? Color(0x00000000)
-                        : Color(0x00000000),
+                        ? FlutterFlowTheme.of(context).primary
+                        : Color(0xFF757575),
                     fontSize: 11.0,
                   ),
                 ),

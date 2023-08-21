@@ -126,10 +126,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // InfoPage
   {
-    'rzvoq6gh': {
-      'en': 'Page Title',
-      'pl': 'Tytuł strony',
-      'sk': 'Názov stránky',
+    'gx27qubs': {
+      'en': 'Hello World',
+      'pl': '',
+      'sk': '',
+    },
+    'cjfsc01v': {
+      'en': 'Hello World',
+      'pl': '',
+      'sk': '',
     },
     'gpl510i8': {
       'en': 'About',
@@ -139,10 +144,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // PuzzleGamePage
   {
-    'dajd3gts': {
-      'en': 'Page Title',
-      'pl': 'Tytuł strony',
-      'sk': 'Názov stránky',
+    'okf7c4xt': {
+      'en': '0/20',
+      'pl': '',
+      'sk': '',
+    },
+    '34oifbjw': {
+      'en': 'QR Code Scanner',
+      'pl': '',
+      'sk': '',
+    },
+    '987tyc3g': {
+      'en':
+          'asdjzhbxvlkcjbvhnzlxkcjvnzxclkjvnzlkjxvlkzxjcbvlzkjxcbvlkzjxcbvlkzjxcbvlkzjxcbvlkzjxcbvlkzjxcbnvlkzxmncbvlzkxnmcbvlzkxncmbvlzkxcjnvbzxlkjcvbzlkjxcbvlzkxjcbvlzkjxcbvlkzxjcbvlkzxjcbvlkzjxbcvlkjzxbcvlkzxjbcvlkjzbxcvlkjzxbcvlkjzbxclkvjbzxclkvjbzxlkcjvbzxlkjcvbzkljxcbvlkjzxcbvlkzxjcbvlkzjxcbvlkzjxbcvlkjznxcvlkjnzxclkvjnzxclkvjnzxclkvmnzxclkmvnzxlkcvjnzxclkjvnzxckjlvxzclkjh',
+      'pl': '',
+      'sk': '',
     },
     'yy9on64e': {
       'en': 'Puzzle game',
@@ -181,14 +197,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // AttractionComponent
   {
-    'a57kqeyi': {
+    'ghddol8f': {
       'en': 'Cancel',
-      'pl': '',
-      'sk': '',
+      'pl': 'Anulować',
+      'sk': 'Zrušiť',
+    },
+  },
+  // LanguageChoiceComponent
+  {
+    '4vqiv5kl': {
+      'en': 'Select language',
+      'pl': 'Wybierz język',
+      'sk': 'Zvoľ jazyk',
+    },
+    'o0xuq2iy': {
+      'en': 'English',
+      'pl': 'język angielski',
+      'sk': 'Angličtina',
+    },
+    '8g2xydjt': {
+      'en': 'Slovak',
+      'pl': 'słowacki',
+      'sk': 'slovenský',
+    },
+    'lrzb17i6': {
+      'en': 'Wrong',
+      'pl': 'Zło',
+      'sk': 'Nesprávne',
+    },
+    'y0s39oku': {
+      'en': 'Close',
+      'pl': 'Zamknąć',
+      'sk': 'Zavrieť',
     },
   },
   // Miscellaneous
   {
+    'q6psbwkx': {
+      'en': '',
+      'pl': '',
+      'sk': '',
+    },
     'jiwkkfsf': {
       'en': 'Please gimme camera',
       'pl': 'Proszę daj mi aparat',

@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  aligned_dialog: 0.0.6
   auto_size_text: 3.0.0
   cached_network_image: 3.2.1
   floating_bottom_navigation_bar: 1.5.2
@@ -46,6 +47,7 @@ dependencies:
   path_provider_android: 2.0.25
   path_provider_foundation: 2.2.2
   path_provider_platform_interface: 2.0.6
+  percent_indicator: 4.2.2
   provider: 6.0.4
   shared_preferences: 2.0.15
   shared_preferences_android: 2.1.0
