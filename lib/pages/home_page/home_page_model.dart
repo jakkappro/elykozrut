@@ -1,7 +1,9 @@
+import '/components/filter_attraction_widget.dart';
 import '/components/shared/header/header_widget.dart';
 import '/components/shared/icon_text/icon_text_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';

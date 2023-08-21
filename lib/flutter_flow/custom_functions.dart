@@ -19,7 +19,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.721188, 18.918688),
     phoneNumber: "+48334740601",
     url: "https://turysta.brenna.org.pl/pl/park-turystyki",
-    attractionIds: [1, 2, 3, 4],
+    attractionIds: [0, 1, 2, 3, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -28,7 +28,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.719861, 18.921944),
     phoneNumber: "+48513422143",
     url: "http://koziazagroda.pl",
-    attractionIds: [1, 6, 5],
+    attractionIds: [0, 1, 6, 5],
   ));
 
   ret.add(AttractionStruct(
@@ -37,7 +37,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.722582, 18.912698),
     phoneNumber: "+48334000021",
     url: "https://domzielin.eu",
-    attractionIds: [1, 8, 6, 3, 5, 4],
+    attractionIds: [0, 1, 8, 6, 3, 5, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -46,7 +46,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.727028, 18.898476),
     phoneNumber: "+48338586971",
     url: "https://turysta.brenna.org.pl/pl/ogrod-zielin-z-placem-zabaw",
-    attractionIds: [1, 8, 4],
+    attractionIds: [0, 1, 8, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -55,7 +55,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.748698, 18.898081),
     phoneNumber: "+48338536496",
     url: "https://turysta.brenna.org.pl/pl/dworek-mysliwski-konczakowka",
-    attractionIds: [6, 5],
+    attractionIds: [0, 6, 5],
   ));
 
   ret.add(AttractionStruct(
@@ -64,7 +64,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.7582559, 18.8664292),
     phoneNumber: "+48338539630",
     url: "http://www.chlebowachata.pl",
-    attractionIds: [1, 6, 5],
+    attractionIds: [0, 1, 6, 5],
   ));
 
   ret.add(AttractionStruct(
@@ -73,7 +73,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.774006, 18.849722),
     phoneNumber: "+48338586971",
     url: "https://turysta.brenna.org.pl/pl/transgraniczna-strefa-kultury-2",
-    attractionIds: [1, 2, 7, 4],
+    attractionIds: [0, 1, 2, 7, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -82,7 +82,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.78177, 18.827916),
     phoneNumber: "+48338510351",
     url: "http://www.dworkossakow.pl",
-    attractionIds: [1, 7, 5],
+    attractionIds: [0, 1, 7, 5],
   ));
 
   ret.add(AttractionStruct(
@@ -91,7 +91,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.72703, 18.806334),
     phoneNumber: "+48338542653",
     url: "https://visit.ustron.pl/pl/dab-sobieskiego,578",
-    attractionIds: [8, 4],
+    attractionIds: [0, 8, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -100,7 +100,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.654989, 18.861402),
     phoneNumber: "+48790262829",
     url: "https://www.wisla.pl/turysta/attractions/138",
-    attractionIds: [2, 4],
+    attractionIds: [0, 2, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -109,7 +109,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.718757, 19.035103),
     phoneNumber: "+48338178429",
     url: "http://www.szczyrk.wiara.org.pl",
-    attractionIds: [5, 4],
+    attractionIds: [0, 5, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -118,7 +118,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.560523, 18.915318),
     phoneNumber: "+48790262829",
     url: "http://chatakawuloka.eu",
-    attractionIds: [1, 6, 5],
+    attractionIds: [0, 1, 6, 5],
   ));
 
   ret.add(AttractionStruct(
@@ -127,7 +127,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.561733, 19.087634),
     phoneNumber: "+48338637399",
     url: "http://gok.milowka.pl",
-    attractionIds: [6, 5],
+    attractionIds: [0, 6, 5],
   ));
 
   ret.add(AttractionStruct(
@@ -136,7 +136,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.670707, 19.391867),
     phoneNumber: "+48338747003",
     url: "https://jelesnia.naszgok.pl/zabawka-ludowa/g,marian-i-wieslawa-loboz",
-    attractionIds: [1, 2, 5],
+    attractionIds: [0, 1, 2, 5],
   ));
 
   ret.add(AttractionStruct(
@@ -145,7 +145,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.544961, 19.369119),
     phoneNumber: "+421903044033",
     url: "https://csg.gajdy.sk",
-    attractionIds: [3, 5],
+    attractionIds: [0, 3, 5],
   ));
 
   ret.add(AttractionStruct(
@@ -154,7 +154,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.541162, 19.499904),
     phoneNumber: "+421907114021",
     url: "https://www.oravskemuzeum.sk/expozicie/literarne-expozicie/hajovna",
-    attractionIds: [6, 7, 5],
+    attractionIds: [0, 6, 7, 5],
   ));
 
   ret.add(AttractionStruct(
@@ -163,7 +163,7 @@ List<AttractionStruct> newCustomFunction() {
     addressLocation: LatLng(49.40724, 19.517058),
     phoneNumber: "+421905915108",
     url: "http://www.oravskagaleria.sk/slanicky_ostrov_umenia.html",
-    attractionIds: [6, 4],
+    attractionIds: [0, 6, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -173,7 +173,7 @@ List<AttractionStruct> newCustomFunction() {
     phoneNumber: "+421905243223",
     url:
         "https://www.vavrecka.sk/obec/zaujimavosti-obce-1/400-rocna-vavrekova-lipa-22sk.html",
-    attractionIds: [8, 4],
+    attractionIds: [0, 8, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -183,7 +183,7 @@ List<AttractionStruct> newCustomFunction() {
     phoneNumber: "043/5577207",
     url:
         "https://www.babin.sk/obec-2/udalosti-v-obci/kultura/stala-expozicia-ludoveho-rezbarstva",
-    attractionIds: [2, 4],
+    attractionIds: [0, 2, 4],
   ));
 
   ret.add(AttractionStruct(
@@ -193,7 +193,7 @@ List<AttractionStruct> newCustomFunction() {
     phoneNumber: "+421917773541",
     url:
         "https://www.babin.sk/obec-2/za-vonou-dreva/expozicia-ludoveho-rezbara-stefana-sivana",
-    attractionIds: [2, 4],
+    attractionIds: [0, 2, 4],
   ));
 
   return ret;

@@ -1,7 +1,9 @@
+import '/components/filter_attraction_widget.dart';
 import '/components/shared/header/header_widget.dart';
 import '/components/shared/icon_text/icon_text_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -57,11 +59,66 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     updateCallback: () => setState(() {}),
                     child: HeaderWidget(),
                   ),
-                  Container(
-                    width: double.infinity,
-                    height: 100.0,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                  Builder(
+                    builder: (context) => InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        await showAlignedDialog(
+                          context: context,
+                          isGlobal: true,
+                          avoidOverflow: false,
+                          targetAnchor: AlignmentDirectional(0.0, 0.0)
+                              .resolve(Directionality.of(context)),
+                          followerAnchor: AlignmentDirectional(0.0, 0.0)
+                              .resolve(Directionality.of(context)),
+                          builder: (dialogContext) {
+                            return Material(
+                              color: Colors.transparent,
+                              child: GestureDetector(
+                                onTap: () => FocusScope.of(context)
+                                    .requestFocus(_model.unfocusNode),
+                                child: Container(
+                                  width: MediaQuery.sizeOf(context).width * 0.5,
+                                  child: FilterAttractionWidget(),
+                                ),
+                              ),
+                            );
+                          },
+                        ).then((value) => setState(() {}));
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              15.0, 12.0, 16.0, 12.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                FFLocalizations.of(context).getText(
+                                  'j1tlexfh' /* Hello World */,
+                                ),
+                                style: FlutterFlowTheme.of(context).bodyMedium,
+                              ),
+                              Icon(
+                                Icons.search,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                size: 24.0,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                   Builder(
@@ -113,9 +170,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     Align(
                                       alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          '17gbmdfv' /* Hello World */,
-                                        ),
+                                        attractionItem.name,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
@@ -132,9 +187,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     IconTextWidget(
                                       key: Key(
                                           'Keyisi_${attractionIndex}_of_${attraction.length}'),
-                                      text: FFLocalizations.of(context).getText(
-                                        'lkn9rwg3' /* Hello */,
-                                      ),
+                                      text: attractionItem.address,
                                       icon: Icon(
                                         Icons.home,
                                       ),
@@ -142,7 +195,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     IconTextWidget(
                                       key: Key(
                                           'Keyusg_${attractionIndex}_of_${attraction.length}'),
-                                      text: '+421',
+                                      text: attractionItem.phoneNumber,
                                       icon: Icon(
                                         Icons.phone_enabled,
                                       ),

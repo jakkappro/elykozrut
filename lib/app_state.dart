@@ -46,6 +46,12 @@ class FFAppState extends ChangeNotifier {
   ) {
     _Attractions[_index] = updateFn(_Attractions[_index]);
   }
+
+  int _CurrentFilter = 0;
+  int get CurrentFilter => _CurrentFilter;
+  set CurrentFilter(int _value) {
+    _CurrentFilter = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {
