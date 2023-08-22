@@ -25,6 +25,7 @@ void main() async {
 
   // Start final custom actions code
   await actions.updateAttractions();
+  await actions.setQRCodes();
   // End final custom actions code
 
   runApp(ChangeNotifierProvider(

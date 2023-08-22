@@ -63,7 +63,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
             borderRadius: BorderRadius.circular(0.0),
             child: Image.asset(
               'assets/images/eu_flag.png',
-              width: 80.0,
+              width: 40.0,
               height: 40.0,
               fit: BoxFit.scaleDown,
             ),

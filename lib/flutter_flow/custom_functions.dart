@@ -208,5 +208,9 @@ double? getAmountOfScannedCodes(List<QRCodeScannedStruct> codes) {
     }
   }
 
+  if (ret == 0.0) {
+    return 0;
+  }
+
   return 20.0 / ret;
 }
