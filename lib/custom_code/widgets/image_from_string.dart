@@ -36,7 +36,6 @@ class _ImageFromStringState extends State<ImageFromString> {
           image: AssetImage('assets/images/' + widget.imageName),
           fit: BoxFit.scaleDown,
         ),
-        shape: BoxShape.circle,
       ),
     );
   }

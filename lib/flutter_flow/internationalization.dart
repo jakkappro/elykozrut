@@ -142,7 +142,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pl': 'Skaner kodów QR',
       'sk': 'Skener QR kódov',
     },
-    'q92vkygz': {
+    '5yvj63qk': {
       'en': 'Cancel',
       'pl': '',
       'sk': '',

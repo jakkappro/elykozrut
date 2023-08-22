@@ -112,7 +112,7 @@ class _PuzzleGamePageWidgetState extends State<PuzzleGamePageWidget> {
                           _model.code = await FlutterBarcodeScanner.scanBarcode(
                             '#C62828', // scanning line color
                             FFLocalizations.of(context).getText(
-                              'q92vkygz' /* Cancel */,
+                              '5yvj63qk' /* Cancel */,
                             ), // cancel button text
                             true, // whether to show the flash icon
                             ScanMode.QR,

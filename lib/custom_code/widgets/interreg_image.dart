@@ -34,6 +34,8 @@ class _InterregState extends State<InterregImage> {
 
     return ImageFromString(
       imageName: "Interreg_" + localization + ".png",
+      width: widget.width,
+      height: widget.height,
     );
   }
 }
