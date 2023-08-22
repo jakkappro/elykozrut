@@ -59,7 +59,7 @@ class _IconTextWidgetState extends State<IconTextWidget> {
           children: [
             widget.icon!,
             Container(
-              width: MediaQuery.sizeOf(context).width * 0.7,
+              width: MediaQuery.sizeOf(context).width * 0.6,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).secondaryBackground,
               ),

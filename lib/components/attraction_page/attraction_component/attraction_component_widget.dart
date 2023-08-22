@@ -2,6 +2,7 @@ import '/backend/schema/structs/index.dart';
 import '/components/shared/icon_text/icon_text_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:map_launcher/map_launcher.dart' as $ml;
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
@@ -57,13 +58,12 @@ class _AttractionComponentWidgetState extends State<AttractionComponentWidget> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
-                  'https://picsum.photos/seed/291/600',
+              Container(
+                width: double.infinity,
+                height: 150.0,
+                child: custom_widgets.InterregImage(
                   width: double.infinity,
-                  height: 100.0,
-                  fit: BoxFit.cover,
+                  height: 150.0,
                 ),
               ),
               Text(
@@ -73,23 +73,35 @@ class _AttractionComponentWidgetState extends State<AttractionComponentWidget> {
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium,
               ),
-              wrapWithModel(
-                model: _model.iconTextModel1,
-                updateCallback: () => setState(() {}),
-                child: IconTextWidget(
-                  text: widget.attraction!.address,
-                  icon: Icon(
-                    Icons.home,
+              Container(
+                width: MediaQuery.sizeOf(context).width * 0.8,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+                child: wrapWithModel(
+                  model: _model.iconTextModel1,
+                  updateCallback: () => setState(() {}),
+                  child: IconTextWidget(
+                    text: widget.attraction!.address,
+                    icon: Icon(
+                      Icons.home,
+                    ),
                   ),
                 ),
               ),
-              wrapWithModel(
-                model: _model.iconTextModel2,
-                updateCallback: () => setState(() {}),
-                child: IconTextWidget(
-                  text: widget.attraction!.phoneNumber,
-                  icon: Icon(
-                    Icons.phone_enabled,
+              Container(
+                width: MediaQuery.sizeOf(context).width * 0.8,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+                child: wrapWithModel(
+                  model: _model.iconTextModel2,
+                  updateCallback: () => setState(() {}),
+                  child: IconTextWidget(
+                    text: widget.attraction!.phoneNumber,
+                    icon: Icon(
+                      Icons.phone_enabled,
+                    ),
                   ),
                 ),
               ),
@@ -257,7 +269,10 @@ class _AttractionComponentWidgetState extends State<AttractionComponentWidget> {
                   fit: BoxFit.cover,
                 ),
               ),
-            ].divide(SizedBox(height: 20.0)).addToEnd(SizedBox(height: 20.0)),
+            ]
+                .divide(SizedBox(height: 20.0))
+                .addToStart(SizedBox(height: 60.0))
+                .addToEnd(SizedBox(height: 20.0)),
           ),
         ),
         Align(

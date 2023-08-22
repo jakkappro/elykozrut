@@ -12,6 +12,6 @@ import 'package:flutter/material.dart';
 
 Future updateAttractions() async {
   // Add your function code here!
-  var listOfAttractions = newCustomFunction();
+  var listOfAttractions = getArrayOfAttractions();
   FFAppState().Attractions = listOfAttractions;
 }

@@ -127,8 +127,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     builder: (context) {
                       final attraction = FFAppState()
                           .Attractions
-                          .where((e) =>
-                              e.attractionIds.contains(_model.currentFilter))
+                          .where((e) => e.attractionIds
+                              .contains(FFAppState().CurrentFilter))
                           .toList();
                       return ListView.separated(
                         padding: EdgeInsets.zero,
@@ -214,7 +214,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ]
                     .divide(SizedBox(height: 20.0))
-                    .addToStart(SizedBox(height: 15.0)),
+                    .addToStart(SizedBox(height: 15.0))
+                    .addToEnd(SizedBox(height: 90.0)),
               ),
             ),
           ),

@@ -10,7 +10,7 @@ import 'place.dart';
 import 'uploaded_file.dart';
 import '/backend/schema/structs/index.dart';
 
-List<AttractionStruct> newCustomFunction() {
+List<AttractionStruct> getArrayOfAttractions() {
   var ret = <AttractionStruct>[];
 
   ret.add(AttractionStruct(
