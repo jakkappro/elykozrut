@@ -10,5 +10,19 @@ import 'package:flutter/material.dart';
 
 Future<bool> containsQRCode(String code) async {
   // Add your function code here!
-  var list = FFAppstate().scannedQrCodes;
+  var list = FFAppState().scannedCodes;
+
+  if (list == null || list.isEmpty) {
+    return false;
+  }
+
+  for (var item in list) {
+    if (item.link == code) {
+      // update scanned to true
+      item.scanned = true;
+      return true;
+    }
+  }
+
+  return false;
 }

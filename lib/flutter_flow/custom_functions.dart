@@ -199,6 +199,14 @@ List<AttractionStruct> getArrayOfAttractions() {
   return ret;
 }
 
-double getAmountOfScannedCodes() {
-  return 0.0;
+double? getAmountOfScannedCodes(List<QRCodeScannedStruct> codes) {
+  var ret = 0.0;
+
+  for (var code in codes) {
+    if (code.scanned) {
+      ret += 1.0;
+    }
+  }
+
+  return 20.0 / ret;
 }

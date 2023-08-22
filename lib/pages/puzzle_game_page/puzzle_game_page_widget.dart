@@ -1,6 +1,8 @@
 import '/components/shared/header/header_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/actions/index.dart' as actions;
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -83,7 +85,8 @@ class _PuzzleGamePageWidgetState extends State<PuzzleGamePageWidget> {
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                               LinearPercentIndicator(
-                                percent: 0.2,
+                                percent: functions.getAmountOfScannedCodes(
+                                    FFAppState().scannedCodes.toList())!,
                                 lineHeight: 10.0,
                                 animation: true,
                                 progressColor:
@@ -112,11 +115,16 @@ class _PuzzleGamePageWidgetState extends State<PuzzleGamePageWidget> {
                           _model.code = await FlutterBarcodeScanner.scanBarcode(
                             '#C62828', // scanning line color
                             FFLocalizations.of(context).getText(
-                              '5yvj63qk' /* Cancel */,
+                              '0vx557g2' /* Cancel */,
                             ), // cancel button text
                             true, // whether to show the flash icon
                             ScanMode.QR,
                           );
+
+                          await actions.containsQRCode(
+                            _model.code!,
+                          );
+                          setState(() {});
 
                           setState(() {});
                         },

@@ -9,8 +9,10 @@ class QRCodeScannedStruct extends BaseStruct {
   QRCodeScannedStruct({
     String? link,
     bool? scanned,
+    String? name,
   })  : _link = link,
-        _scanned = scanned;
+        _scanned = scanned,
+        _name = name;
 
   // "link" field.
   String? _link;
@@ -24,10 +26,17 @@ class QRCodeScannedStruct extends BaseStruct {
   set scanned(bool? val) => _scanned = val;
   bool hasScanned() => _scanned != null;
 
+  // "name" field.
+  String? _name;
+  String get name => _name ?? '';
+  set name(String? val) => _name = val;
+  bool hasName() => _name != null;
+
   static QRCodeScannedStruct fromMap(Map<String, dynamic> data) =>
       QRCodeScannedStruct(
         link: data['link'] as String?,
         scanned: data['scanned'] as bool?,
+        name: data['name'] as String?,
       );
 
   static QRCodeScannedStruct? maybeFromMap(dynamic data) =>
@@ -36,6 +45,7 @@ class QRCodeScannedStruct extends BaseStruct {
   Map<String, dynamic> toMap() => {
         'link': _link,
         'scanned': _scanned,
+        'name': _name,
       }.withoutNulls;
 
   @override
@@ -47,6 +57,10 @@ class QRCodeScannedStruct extends BaseStruct {
         'scanned': serializeParam(
           _scanned,
           ParamType.bool,
+        ),
+        'name': serializeParam(
+          _name,
+          ParamType.String,
         ),
       }.withoutNulls;
 
@@ -62,6 +76,11 @@ class QRCodeScannedStruct extends BaseStruct {
           ParamType.bool,
           false,
         ),
+        name: deserializeParam(
+          data['name'],
+          ParamType.String,
+          false,
+        ),
       );
 
   @override
@@ -71,18 +90,21 @@ class QRCodeScannedStruct extends BaseStruct {
   bool operator ==(Object other) {
     return other is QRCodeScannedStruct &&
         link == other.link &&
-        scanned == other.scanned;
+        scanned == other.scanned &&
+        name == other.name;
   }
 
   @override
-  int get hashCode => const ListEquality().hash([link, scanned]);
+  int get hashCode => const ListEquality().hash([link, scanned, name]);
 }
 
 QRCodeScannedStruct createQRCodeScannedStruct({
   String? link,
   bool? scanned,
+  String? name,
 }) =>
     QRCodeScannedStruct(
       link: link,
       scanned: scanned,
+      name: name,
     );
