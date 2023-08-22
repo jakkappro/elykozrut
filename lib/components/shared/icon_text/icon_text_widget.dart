@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -57,9 +58,16 @@ class _IconTextWidgetState extends State<IconTextWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             widget.icon!,
-            Text(
-              widget.text!,
-              style: FlutterFlowTheme.of(context).bodyMedium,
+            Container(
+              width: MediaQuery.sizeOf(context).width * 0.7,
+              decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).secondaryBackground,
+              ),
+              child: AutoSizeText(
+                widget.text!,
+                maxLines: 1,
+                style: FlutterFlowTheme.of(context).bodyMedium,
+              ),
             ),
           ].divide(SizedBox(width: 15.0)),
         ),

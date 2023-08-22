@@ -1,4 +1,4 @@
-import '/components/filter_attraction_widget.dart';
+import '/components/filter_attraction/filter_attraction_widget.dart';
 import '/components/shared/header/header_widget.dart';
 import '/components/shared/icon_text/icon_text_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -81,7 +81,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 onTap: () => FocusScope.of(context)
                                     .requestFocus(_model.unfocusNode),
                                 child: Container(
-                                  width: MediaQuery.sizeOf(context).width * 0.5,
+                                  height:
+                                      MediaQuery.sizeOf(context).height * 0.8,
+                                  width: MediaQuery.sizeOf(context).width * 0.7,
                                   child: FilterAttractionWidget(),
                                 ),
                               ),

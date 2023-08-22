@@ -98,7 +98,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                     color: Colors.transparent,
                     child: Container(
                       height: MediaQuery.sizeOf(context).height * 0.6,
-                      width: MediaQuery.sizeOf(context).width * 0.3,
+                      width: MediaQuery.sizeOf(context).width * 0.6,
                       child: LanguageChoiceComponentWidget(),
                     ),
                   );

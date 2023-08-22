@@ -82,28 +82,31 @@ class _InfoPageWidgetState extends State<InfoPageWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/716/600',
-                              width: 300.0,
-                              height: 200.0,
-                              fit: BoxFit.cover,
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                'https://picsum.photos/seed/716/600',
+                                width: 300.0,
+                                height: 200.0,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: Image.network(
-                              'https://picsum.photos/seed/869/600',
-                              width: 300.0,
-                              height: 200.0,
-                              fit: BoxFit.cover,
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                'https://picsum.photos/seed/869/600',
+                                width: 300.0,
+                                height: 200.0,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
