@@ -1,5 +1,7 @@
+import '/components/language/language_choice_component/language_choice_component_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -59,13 +61,44 @@ class _HeaderWidgetState extends State<HeaderWidget> {
             ),
             style: FlutterFlowTheme.of(context).headlineMedium,
           ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(0.0),
-            child: Image.asset(
-              'assets/images/eu_flag.png',
-              width: 40.0,
-              height: 40.0,
-              fit: BoxFit.scaleDown,
+          Builder(
+            builder: (context) => InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onTap: () async {
+                await showAlignedDialog(
+                  context: context,
+                  isGlobal: true,
+                  avoidOverflow: false,
+                  targetAnchor: AlignmentDirectional(0.0, 0.0)
+                      .resolve(Directionality.of(context)),
+                  followerAnchor: AlignmentDirectional(0.0, 0.0)
+                      .resolve(Directionality.of(context)),
+                  builder: (dialogContext) {
+                    return Material(
+                      color: Colors.transparent,
+                      child: Container(
+                        height: 60.0,
+                        width: 70.0,
+                        child: LanguageChoiceComponentWidget(),
+                      ),
+                    );
+                  },
+                ).then((value) => setState(() {}));
+
+                setState(() {});
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(0.0),
+                child: Image.asset(
+                  'assets/images/eu_flag.png',
+                  width: 40.0,
+                  height: 40.0,
+                  fit: BoxFit.scaleDown,
+                ),
+              ),
             ),
           ),
         ],

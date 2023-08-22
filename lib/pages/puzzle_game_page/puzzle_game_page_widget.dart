@@ -53,6 +53,7 @@ class _PuzzleGamePageWidgetState extends State<PuzzleGamePageWidget> {
             child: Stack(
               children: [
                 SingleChildScrollView(
+                  primary: false,
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -160,7 +161,7 @@ class _PuzzleGamePageWidgetState extends State<PuzzleGamePageWidget> {
                     ]
                         .divide(SizedBox(height: 15.0))
                         .addToStart(SizedBox(height: 70.0))
-                        .addToEnd(SizedBox(height: 30.0)),
+                        .addToEnd(SizedBox(height: 100.0)),
                   ),
                 ),
                 wrapWithModel(
