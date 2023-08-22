@@ -108,11 +108,6 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // HomePage
   {
-    'z7shxg8r': {
-      'en': 'Hello World',
-      'pl': '',
-      'sk': '',
-    },
     'nq8c6utz': {
       'en': 'Attractions',
       'pl': 'Wdzięki kobiece',
@@ -228,47 +223,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // FilterAttraction
   {
-    'n5utq7g9': {
+    '6xr1oaxr': {
       'en': 'Any',
       'pl': '',
       'sk': '',
     },
-    'pw7u908z': {
+    '8pgtdbri': {
       'en': 'Family',
       'pl': '',
       'sk': '',
     },
-    'w3ej8yao': {
+    'wumdlka5': {
       'en': 'Music',
       'pl': '',
       'sk': '',
     },
-    '2v4cg7ad': {
+    'm703msko': {
       'en': 'Outdoors',
       'pl': '',
       'sk': '',
     },
-    'mb60dyki': {
+    'blhchjem': {
       'en': 'AnyWheather',
       'pl': '',
       'sk': '',
     },
-    'l6sw16eg': {
+    'vhrdr371': {
       'en': 'Ethno',
       'pl': '',
       'sk': '',
     },
-    'sw6pewb4': {
+    'jmkq2i9w': {
       'en': 'Livestyle',
       'pl': '',
       'sk': '',
     },
-    'hut6y0io': {
+    'v0t48eqp': {
       'en': 'Eco',
       'pl': '',
       'sk': '',
     },
-    'nn6pu691': {
+    'v2afkays': {
       'en': 'Cancel',
       'pl': '',
       'sk': '',

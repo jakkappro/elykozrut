@@ -88,6 +88,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             );
                           },
                         ).then((value) => setState(() {}));
+
+                        setState(() {});
                       },
                       child: Container(
                         width: double.infinity,
@@ -104,9 +106,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                FFLocalizations.of(context).getText(
-                                  'z7shxg8r' /* Hello World */,
-                                ),
+                                FFAppState().CurrentFilter.toString(),
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                               Icon(
@@ -130,6 +130,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           .toList();
                       return ListView.separated(
                         padding: EdgeInsets.zero,
+                        primary: false,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         itemCount: attraction.length,
