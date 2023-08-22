@@ -12,12 +12,31 @@ class FFAppState extends ChangeNotifier {
 
   FFAppState._internal();
 
-  Future initializePersistedState() async {}
+  Future initializePersistedState() async {
+    prefs = await SharedPreferences.getInstance();
+    _safeInit(() {
+      _scannedCodes = prefs
+              .getStringList('ff_scannedCodes')
+              ?.map((x) {
+                try {
+                  return QRCodeScannedStruct.fromSerializableMap(jsonDecode(x));
+                } catch (e) {
+                  print("Can't decode persisted data type. Error: $e.");
+                  return null;
+                }
+              })
+              .withoutNulls
+              .toList() ??
+          _scannedCodes;
+    });
+  }
 
   void update(VoidCallback callback) {
     callback();
     notifyListeners();
   }
+
+  late SharedPreferences prefs;
 
   List<AttractionStruct> _Attractions = [
     AttractionStruct.fromSerializableMap(jsonDecode(
@@ -51,6 +70,41 @@ class FFAppState extends ChangeNotifier {
   int get CurrentFilter => _CurrentFilter;
   set CurrentFilter(int _value) {
     _CurrentFilter = _value;
+  }
+
+  List<QRCodeScannedStruct> _scannedCodes = [];
+  List<QRCodeScannedStruct> get scannedCodes => _scannedCodes;
+  set scannedCodes(List<QRCodeScannedStruct> _value) {
+    _scannedCodes = _value;
+    prefs.setStringList(
+        'ff_scannedCodes', _value.map((x) => x.serialize()).toList());
+  }
+
+  void addToScannedCodes(QRCodeScannedStruct _value) {
+    _scannedCodes.add(_value);
+    prefs.setStringList(
+        'ff_scannedCodes', _scannedCodes.map((x) => x.serialize()).toList());
+  }
+
+  void removeFromScannedCodes(QRCodeScannedStruct _value) {
+    _scannedCodes.remove(_value);
+    prefs.setStringList(
+        'ff_scannedCodes', _scannedCodes.map((x) => x.serialize()).toList());
+  }
+
+  void removeAtIndexFromScannedCodes(int _index) {
+    _scannedCodes.removeAt(_index);
+    prefs.setStringList(
+        'ff_scannedCodes', _scannedCodes.map((x) => x.serialize()).toList());
+  }
+
+  void updateScannedCodesAtIndex(
+    int _index,
+    QRCodeScannedStruct Function(QRCodeScannedStruct) updateFn,
+  ) {
+    _scannedCodes[_index] = updateFn(_scannedCodes[_index]);
+    prefs.setStringList(
+        'ff_scannedCodes', _scannedCodes.map((x) => x.serialize()).toList());
   }
 }
 

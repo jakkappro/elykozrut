@@ -9,6 +9,7 @@ import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'attraction_component_model.dart';
 export 'attraction_component_model.dart';
 
@@ -60,10 +61,10 @@ class _AttractionComponentWidgetState extends State<AttractionComponentWidget> {
             children: [
               Container(
                 width: double.infinity,
-                height: 150.0,
+                height: 100.0,
                 child: custom_widgets.InterregImage(
                   width: double.infinity,
-                  height: 150.0,
+                  height: 100.0,
                 ),
               ),
               Text(
@@ -89,18 +90,30 @@ class _AttractionComponentWidgetState extends State<AttractionComponentWidget> {
                   ),
                 ),
               ),
-              Container(
-                width: MediaQuery.sizeOf(context).width * 0.8,
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                ),
-                child: wrapWithModel(
-                  model: _model.iconTextModel2,
-                  updateCallback: () => setState(() {}),
-                  child: IconTextWidget(
-                    text: widget.attraction!.phoneNumber,
-                    icon: Icon(
-                      Icons.phone_enabled,
+              InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  await launchUrl(Uri(
+                    scheme: 'tel',
+                    path: '123789',
+                  ));
+                },
+                child: Container(
+                  width: MediaQuery.sizeOf(context).width * 0.8,
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                  ),
+                  child: wrapWithModel(
+                    model: _model.iconTextModel2,
+                    updateCallback: () => setState(() {}),
+                    child: IconTextWidget(
+                      text: widget.attraction!.phoneNumber,
+                      icon: Icon(
+                        Icons.phone_enabled,
+                      ),
                     ),
                   ),
                 ),
@@ -262,10 +275,8 @@ class _AttractionComponentWidgetState extends State<AttractionComponentWidget> {
               ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
-                  'https://picsum.photos/seed/144/600',
-                  width: 300.0,
-                  height: 200.0,
+                child: Image.asset(
+                  'assets/images/logo.png',
                   fit: BoxFit.cover,
                 ),
               ),

@@ -37,12 +37,32 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => NavBarPage(),
+      errorBuilder: (context, state) => appStateNotifier.showSplashImage
+          ? Builder(
+              builder: (context) => Container(
+                color: Colors.transparent,
+                child: Image.asset(
+                  'assets/images/logo.png',
+                  fit: BoxFit.fitWidth,
+                ),
+              ),
+            )
+          : NavBarPage(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => NavBarPage(),
+          builder: (context, _) => appStateNotifier.showSplashImage
+              ? Builder(
+                  builder: (context) => Container(
+                    color: Colors.transparent,
+                    child: Image.asset(
+                      'assets/images/logo.png',
+                      fit: BoxFit.fitWidth,
+                    ),
+                  ),
+                )
+              : NavBarPage(),
         ),
         FFRoute(
           name: 'HomePage',

@@ -198,3 +198,7 @@ List<AttractionStruct> getArrayOfAttractions() {
 
   return ret;
 }
+
+double getAmountOfScannedCodes() {
+  return 0.0;
+}

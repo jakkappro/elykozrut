@@ -32,6 +32,8 @@ class _InterregState extends State<InterregImage> {
       localization = "SK";
     }
 
-    return ImageFromString("Interreg_" + localization + ".png");
+    return ImageFromString(
+      imageName: "Interreg_" + localization + ".png",
+    );
   }
 }

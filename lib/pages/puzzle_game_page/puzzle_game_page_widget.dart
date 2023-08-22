@@ -2,6 +2,7 @@ import '/components/shared/header/header_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
@@ -75,12 +76,10 @@ class _PuzzleGamePageWidgetState extends State<PuzzleGamePageWidget> {
                               20.0, 0.0, 20.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                FFLocalizations.of(context).getText(
-                                  'okf7c4xt' /* 0/20 */,
-                                ),
+                                '${FFAppState().scannedCodes.where((e) => e.scanned).toList().length.toString()} / 20',
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                               LinearPercentIndicator(
@@ -104,36 +103,55 @@ class _PuzzleGamePageWidgetState extends State<PuzzleGamePageWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                10.0, 10.0, 10.0, 10.0),
-                            child: FaIcon(
-                              FontAwesomeIcons.qrcode,
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              size: 24.0,
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          _model.code = await FlutterBarcodeScanner.scanBarcode(
+                            '#C62828', // scanning line color
+                            FFLocalizations.of(context).getText(
+                              'q92vkygz' /* Cancel */,
+                            ), // cancel button text
+                            true, // whether to show the flash icon
+                            ScanMode.QR,
+                          );
+
+                          setState(() {});
+                        },
+                        child: Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  10.0, 10.0, 10.0, 10.0),
+                              child: FaIcon(
+                                FontAwesomeIcons.qrcode,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                size: 24.0,
+                              ),
                             ),
                           ),
                         ),
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          '987tyc3g' /* asdjzhbxvlkcjbvhnzlxkcjvnzxclk... */,
+                          '987tyc3g' /* The task for a participant of ... */,
                         ),
                         textAlign: TextAlign.justify,
                         style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
                     ]
                         .divide(SizedBox(height: 15.0))
-                        .addToStart(SizedBox(height: 50.0))
+                        .addToStart(SizedBox(height: 70.0))
                         .addToEnd(SizedBox(height: 30.0)),
                   ),
                 ),

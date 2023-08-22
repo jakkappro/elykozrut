@@ -1,6 +1,7 @@
 import '/components/shared/header/header_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,33 +53,31 @@ class _InfoPageWidgetState extends State<InfoPageWidget> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.network(
-                          'https://picsum.photos/seed/338/600',
-                          width: 300.0,
-                          height: 200.0,
-                          fit: BoxFit.cover,
+                      Container(
+                        width: double.infinity,
+                        height: 100.0,
+                        child: custom_widgets.InterregImage(
+                          width: double.infinity,
+                          height: 100.0,
                         ),
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          'gx27qubs' /* Hello World */,
+                          'gx27qubs' /* Welcome in eLykozrut */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
-                        child: Image.network(
-                          'https://picsum.photos/seed/265/600',
-                          width: 300.0,
-                          height: 200.0,
+                        child: Image.asset(
+                          'assets/images/logo.png',
+                          height: 300.0,
                           fit: BoxFit.cover,
                         ),
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          'cjfsc01v' /* Hello World */,
+                          'cjfsc01v' /* The Municipality of Brenna tog... */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
@@ -119,7 +118,7 @@ class _InfoPageWidgetState extends State<InfoPageWidget> {
                       ),
                     ]
                         .divide(SizedBox(height: 15.0))
-                        .addToStart(SizedBox(height: 30.0))
+                        .addToStart(SizedBox(height: 70.0))
                         .addToEnd(SizedBox(height: 90.0)),
                   ),
                 ),
