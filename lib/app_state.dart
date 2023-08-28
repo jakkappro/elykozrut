@@ -66,6 +66,56 @@ class FFAppState extends ChangeNotifier {
     _Attractions[_index] = updateFn(_Attractions[_index]);
   }
 
+  List<AttractionStruct> _AttractionsSK = [];
+  List<AttractionStruct> get AttractionsSK => _AttractionsSK;
+  set AttractionsSK(List<AttractionStruct> _value) {
+    _AttractionsSK = _value;
+  }
+
+  void addToAttractionsSK(AttractionStruct _value) {
+    _AttractionsSK.add(_value);
+  }
+
+  void removeFromAttractionsSK(AttractionStruct _value) {
+    _AttractionsSK.remove(_value);
+  }
+
+  void removeAtIndexFromAttractionsSK(int _index) {
+    _AttractionsSK.removeAt(_index);
+  }
+
+  void updateAttractionsSKAtIndex(
+    int _index,
+    AttractionStruct Function(AttractionStruct) updateFn,
+  ) {
+    _AttractionsSK[_index] = updateFn(_AttractionsSK[_index]);
+  }
+
+  List<AttractionStruct> _AttractionsPL = [];
+  List<AttractionStruct> get AttractionsPL => _AttractionsPL;
+  set AttractionsPL(List<AttractionStruct> _value) {
+    _AttractionsPL = _value;
+  }
+
+  void addToAttractionsPL(AttractionStruct _value) {
+    _AttractionsPL.add(_value);
+  }
+
+  void removeFromAttractionsPL(AttractionStruct _value) {
+    _AttractionsPL.remove(_value);
+  }
+
+  void removeAtIndexFromAttractionsPL(int _index) {
+    _AttractionsPL.removeAt(_index);
+  }
+
+  void updateAttractionsPLAtIndex(
+    int _index,
+    AttractionStruct Function(AttractionStruct) updateFn,
+  ) {
+    _AttractionsPL[_index] = updateFn(_AttractionsPL[_index]);
+  }
+
   int _CurrentFilter = 0;
   int get CurrentFilter => _CurrentFilter;
   set CurrentFilter(int _value) {

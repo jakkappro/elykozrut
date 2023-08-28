@@ -52,7 +52,15 @@ class _AttractionPageWidgetState extends State<AttractionPageWidget> {
             model: _model.attractionComponentModel,
             updateCallback: () => setState(() {}),
             child: AttractionComponentWidget(
-              attraction: FFAppState().Attractions[widget.indexOfItem!],
+              attraction: () {
+                if (FFLocalizations.of(context).languageCode == 'sk') {
+                  return FFAppState().AttractionsSK[widget.indexOfItem!];
+                } else if (FFLocalizations.of(context).languageCode == 'en') {
+                  return FFAppState().Attractions[widget.indexOfItem!];
+                } else {
+                  return FFAppState().AttractionsPL[widget.indexOfItem!];
+                }
+              }(),
             ),
           ),
         ),
