@@ -91,7 +91,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                   },
                 ).then((value) => setState(() {}));
 
-                setState(() {});
+                _model.updatePage(() {});
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(0.0),
