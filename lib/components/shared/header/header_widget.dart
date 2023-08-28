@@ -59,7 +59,10 @@ class _HeaderWidgetState extends State<HeaderWidget> {
             FFLocalizations.of(context).getText(
               '65nk4071' /* For the smell of wood */,
             ),
-            style: FlutterFlowTheme.of(context).headlineMedium,
+            style: FlutterFlowTheme.of(context).headlineMedium.override(
+                  fontFamily: 'Outfit',
+                  fontSize: 20.0,
+                ),
           ),
           Builder(
             builder: (context) => InkWell(
